@@ -13,7 +13,7 @@ Currently, the website is close to its first launch.  Remaining tasks are unifyi
 information, and completing the data anaylsis module.  
 </p><p>
 Future goals include building out an archive for past courses' data to be compared to future data, creating a print report option, 
-and developing a mobile app version. 
+and developing a full mobile app in addition to the current mobile web design. 
 </p>
 <ImageSlider1/>
    </template>

@@ -43,7 +43,7 @@ const prevSlide = () => {
 const startSlider = () => {
     intervalId = setInterval(() => {
         nextSlide();
-    }, 5000);
+    }, 3000);
 };
 
 const playSlider = () => {
