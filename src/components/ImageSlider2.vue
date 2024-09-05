@@ -73,7 +73,7 @@ onUnmounted(() => {
         </div>
       
 
-        <div class="slider flex h-[100%]">
+        <div class="slider flex h-[50%]">
             <div class="flex mx-auto justify-center relative w-[500px] h-[300px] m-auto">
                 <template v-for="(image, index) in images" :key="index">
                     <transition name="fade">
