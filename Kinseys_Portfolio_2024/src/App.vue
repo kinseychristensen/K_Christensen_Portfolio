@@ -1,41 +1,77 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import Tagline from './components/TagLine.vue'
 </script>
 
 <template>
+
+  <div class="profile">
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <img alt="Photo of Kinsey" class="logo" src="@/assets/KChristensen.jpg"/>
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <Tagline msg="Kinsey Christensen" id="tagline"/>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+      <nav id="nav-links">
+        <RouterLink to="/">About Me</RouterLink>
+        <RouterLink to="/projects">Projects</RouterLink>
+        <a href=" https://www.linkedin.com/in/kinsey-christensen/">My LinkedIn</a> 
       </nav>
     </div>
   </header>
 
-  <RouterView />
+  <RouterView class="router"/>
+  
+
+  <footer><a href="https://www.flaticon.com/free-icons/flower" title="flower icons">Flower icons created by Freepik - Flaticon</a>
+          | <a href='https://medium.com/@prachishah03737/vue-3-image-slider-from-scratch-for-beginners-a-step-by-step-tutorial-with-composition-api-03a0aa21fc60'>Image Slider by Prachi Shah</a> </footer>
+</div>
 </template>
 
 <style scoped>
 header {
-  line-height: 1.5;
   max-height: 100vh;
+  display: grid;
+ grid-template-columns: 1fr;
+ grid-template-areas: 
+ "logo"
+ "wrapper";
+ margin-top: 40px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "nav" "tagline";
 }
 
 .logo {
-  display: block;
-  margin: 0 auto 2rem;
+ margin: auto;
+  max-width: 206px;
+  max-height: 256px;
+  border-radius: 20px;
+  grid-area: logo;
+  border-color: rgb(246, 66, 180);
+  border-style: double;
+  
+}
+.wrapper{
+  grid-area: wrapper;
 }
 
 nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
+
+  
+}
+#nav-links{
+  grid-area: nav;
+  
+}
+#tagline{
+  grid-area: tagline;
 }
 
 nav a.router-link-exact-active {
@@ -56,21 +92,30 @@ nav a:first-of-type {
   border: 0;
 }
 
+footer{
+  margin-top: 10px;
+  font-size: small;
+}
+
+
 @media (min-width: 1024px) {
   header {
     display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    max-width: 50vw;
+   grid-area: header;
   }
 
   .logo {
-    margin: 0 2rem 0 0;
+    margin: 0px;
+  
+
   }
 
   header .wrapper {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+    padding: 15px;
   }
 
   nav {
@@ -79,7 +124,23 @@ nav a:first-of-type {
     font-size: 1rem;
 
     padding: 1rem 0;
-    margin-top: 1rem;
+ 
+  }
+  .profile{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "header router"
+    ". router"
+    ". footer"
+    ;
+ 
+  }
+  footer {
+    grid-area: footer;
+  }
+  .router{
+    grid-area: router;
   }
 }
 </style>
