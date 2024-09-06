@@ -2,23 +2,23 @@
 import { ref, onUnmounted } from 'vue';
 
 const images = [
-        { src: 'src/assets/tenmo_images/tenmo_menu.png', 
+        { src: 'https://drive.google.com/file/d/1o2OZ2b8Qa-Q5m9eJp12rAmPa_9Y50K3O/view?usp=share_link', 
         alt: 'menu', 
        
       },
-      { src: 'src/assets/tenmo_images/tenmo_send.png',
+      { src: 'https://drive.google.com/file/d/1sdyb5jcQof4ybIOno0EJq5YN45hLhbl9/view?usp=share_link',
         alt: 'send', 
         
       },
-      { src: 'src/assets/tenmo_images/tenmo_request.png',
+      { src: 'https://drive.google.com/file/d/1YgIFoH-LjaZJDidUaA8ej8IDGc5aG3mQ/view?usp=share_link',
         alt: 'request', 
     },
         
-        { src: 'src/assets/tenmo_images/tenmo_approve.png',
+        { src: 'https://drive.google.com/file/d/13DBybLi6uE1kHwh_njnJjE1PHLgwZZQp/view?usp=share_link',
         alt: 'approve a request', 
       },
 
-      { src: 'src/assets/tenmo_images/tenmo_history.png',
+      { src: 'https://drive.google.com/file/d/1NRT1evg1vAj-6a3O9kO8YiYkLPy_Qy1J/view?usp=share_link',
         alt: 'history', 
       
       },
