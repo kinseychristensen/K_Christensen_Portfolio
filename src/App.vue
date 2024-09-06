@@ -1,6 +1,30 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
+<script>
 import Tagline from './components/TagLine.vue'
+import HomeComponent from './components/HomeComponent.vue';
+import ProjectsComponent from './components/ProjectsComponent.vue';
+
+export default {
+    components: {
+      HomeComponent,
+      ProjectsComponent
+    },
+    data(){
+      return {
+        showProjects: false,
+        showHome: true,
+      }
+    }, 
+    methods: {
+      showHomeNow(){
+        this.showHome = true;
+        this.showProjects = false;
+      }, 
+      showProjectNow(){
+        this.showProjects = true;
+        this.showHome = false;
+      },
+  },
+  }
 </script>
 
 <template>
@@ -13,14 +37,16 @@ import Tagline from './components/TagLine.vue'
       <Tagline msg="Kinsey Christensen" id="tagline"/>
 
       <nav id="nav-links">
-        <RouterLink to="/">About Me</RouterLink>
-        <RouterLink to="/projects">Projects</RouterLink>
+        <a @click="showHomeNow">About Me</a>
+        <a @click="showProjectNow">Projects</a>
         <a href=" https://www.linkedin.com/in/kinsey-christensen/">My LinkedIn</a> 
       </nav>
     </div>
   </header>
 
-  <RouterView class="router"/>
+  <div v-if="showHome"><HomeComponent/></div>
+
+  <div v-if="showProjects"><ProjectsComponent/></div>
   
 
   <footer><a href="https://www.flaticon.com/free-icons/flower" title="flower icons">Flower icons created by Freepik - Flaticon</a>
