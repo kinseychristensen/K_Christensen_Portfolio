@@ -1,4 +1,4 @@
-<script setup>
+<script>
 import Tagline from './components/TagLine.vue'
 import HomeComponent from './components/HomeComponent.vue';
 import ProjectsComponent from './components/ProjectsComponent.vue';
@@ -22,8 +22,9 @@ export default {
       showProjectNow(){
         this.showProjects = true;
         this.showHome = false;
-      }
-    }
+      },
+  },
+  }
 </script>
 
 <template>
