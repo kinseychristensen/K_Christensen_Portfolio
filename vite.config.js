@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  base: '/',
+  base: '/K_Christensen_Portfolio/',
   resolve: {
  
   }
