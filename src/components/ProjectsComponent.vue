@@ -24,10 +24,10 @@
     </div>
   </template>
   <script>
-  import InformativeDetails from '@/components/InformativeDetails.vue';
-  import FlipFlashDetails from '@/components/FlipFlashDetails.vue';
-  import TenmoDetails from '@/components/TenmoDetails.vue';
-  import FutureProjectDetails from '@/components/FutureProjectDetails.vue';
+  import InformativeDetails from './InformativeDetails.vue';
+  import FlipFlashDetails from './FlipFlashDetails.vue';
+  import TenmoDetails from './TenmoDetails.vue';
+  import FutureProjectDetails from './FutureProjectDetails.vue';
   
   
   

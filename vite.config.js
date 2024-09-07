@@ -10,8 +10,6 @@ export default defineConfig({
   ],
   base: '/K_Christensen_Portfolio/',
   resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
+ 
   }
 })

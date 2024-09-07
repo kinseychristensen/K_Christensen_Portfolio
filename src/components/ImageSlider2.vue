@@ -2,32 +2,28 @@
 import { ref, onUnmounted } from 'vue';
 
 const images = [
-        { src: 'https://drive.google.com/file/d/1NvZXn10K2vgSq7KQcqW84t2CujytHea3/view?usp=share_link', 
+{ src: './flip_images/admin_decks.png', 
         alt: 'view of admin page', 
        
       },
-      { src: 'https://drive.google.com/file/d/1RQUM1JJJROnt9I_f6m1EJRXIDgBBtMhe/view?usp=share_link',
+      { src: './flip_images/deck_page.png',
         alt: 'view of user decks', 
         
       },
-      { src: 'https://drive.google.com/file/d/1uvAUasocqZ50Uapi1V2yBqdUFuyFISuM/view?usp=share_link',
+      { src: './flip_images/update_deck.png',
         alt: 'view of update deck page', 
         
       },
-      { src: 'https://drive.google.com/file/d/1oWj4dtyIxFhDkupYCmJ1ro3ppHvUmAmr/view?usp=share_link',
+      { src: './flip_images/create_card.png',
         alt: 'view of create card page', 
         
       },
-      { src: 'https://drive.google.com/file/d/1TmxJGbmhXcTW4wwmAY0uQHc8ANtBJdD1/view?usp=share_link',
+      { src: './flip_images/search_cards.png',
         alt: 'view of card page with search bar', 
         
       },
-      { src: 'https://drive.google.com/file/d/1C23XhBqqCHF9M6y3ibwlcO6poT-nNr9r/view?usp=share_link',
+      { src: './flip_images/study_session.png',
         alt: 'view of study session page', 
-        
-      },
-      { src: 'https://drive.google.com/file/d/1AhXlrPvYgyAg4_pAiw2Y8bBL80cI1MKu/view?usp=share_link',
-        alt: 'view of study session page, back of card', 
         
       },
 ];

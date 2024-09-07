@@ -2,42 +2,43 @@
 import { ref, onUnmounted } from 'vue';
 
 const images = [
-        { src: 'https://drive.google.com/file/d/1FPb9I4jx_CUmqdXwGknv62VVb9f-tgaS/view?usp=share_link', 
+{ src: './informative_images/home_view.png', 
         alt: 'mobile home', 
        
       },
-      { src: 'https://drive.google.com/file/d/1bc_EY_6VBcADk2GLY4Xxc4n0B_MxBJlw/view?usp=share_link',
+      { src: './informative_images/create_class.png',
         alt: 'desktop create class page', 
         
       },
-      { src: 'https://drive.google.com/file/d/1-6iUHYb4X8jKBmK4amOCa22TFqU0tGN_/view?usp=share_link',
+      { src: './informative_images/create_subject.png',
         alt: 'desktop create subject page', 
     },
         
-        { src: 'https://drive.google.com/file/d/1XEjP6s3auanvrQCAHwJlvcw18BD0feeQ/view?usp=share_link',
+        { src: './informative_images/subject_database.png',
         alt: 'desktop subject search page', 
       },
 
-      { src: 'https://drive.google.com/file/d/1yD31Fj3ZlMqinogd2rOR7FM2iAi4kWi8/view?usp=share_link',
+      { src: './informative_images/class_roster.png',
         alt: 'mobile class roster', 
         
       },
-      { src: 'https://drive.google.com/file/d/1sRfVO81YdyhjRUGSkAOBL0a_v8lsgFz7/view?usp=share_link',
+      { src: './informative_images/groups.png',
         alt: 'mobile groups page', 
         
       },
-      { src: 'https://drive.google.com/file/d/1Yyc_0ChDkBRt_iXVQ5jMw1awm4-TI7oW/view?usp=share_link',
+      { src: './informative_images/artifact.png',
         alt: 'desktop create artifact page', 
         
       },
-      { src: 'https://drive.google.com/file/d/1SwUv7sMsUVhm60gPhl0hWna43L78_jxs/view?usp=share_link',
+      { src: './informative_images/subject_page.png',
         alt: 'desktop subject page', 
         
       },
-      { src: 'https://drive.google.com/file/d/1JNbwKIGmdokuFLltt2-D8enO1cqfFun8/view?usp=share_link',
+      { src: './informative_images/student_page.png',
         alt: 'desktop student page', 
         
       },
+      
       
 ];
 

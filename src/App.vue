@@ -6,7 +6,8 @@ import ProjectsComponent from './components/ProjectsComponent.vue';
 export default {
     components: {
       HomeComponent,
-      ProjectsComponent
+      ProjectsComponent, 
+      Tagline,
     },
     data(){
       return {
@@ -31,7 +32,7 @@ export default {
 
   <div class="profile">
   <header>
-    <img alt="Photo of Kinsey" class="logo" src="@/assets/KChristensen.jpg"/>
+    <img alt="Photo of Kinsey" class="logo" src="./assets/KChristensen.jpg"/>
 
     <div class="wrapper">
       <Tagline msg="Kinsey Christensen" id="tagline"/>
