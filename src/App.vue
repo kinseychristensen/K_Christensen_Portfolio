@@ -143,6 +143,7 @@ footer{
   #tagline{
   grid-area: tag;
   max-height: 200px;
+  padding-right: 3px;
 }
 #nav-links{
   grid-area: nav-links;
