@@ -1,121 +1,114 @@
-<script setup>
-import { ref, onUnmounted } from 'vue';
-
-const images = [
-{ src: './tenmo_images/tenmo_menu.png', 
-        alt: 'menu', 
-       
-      },
-      { src: './tenmo_images/tenmo_send.png',
-        alt: 'send', 
-        
-      },
-      { src: './tenmo_images/tenmo_request.png',
-        alt: 'request', 
-    },
-        
-        { src: './tenmo_images/tenmo_approve.png',
-        alt: 'approve a request', 
-      },
-
-      { src: './tenmo_images/tenmo_history.png',
-        alt: 'history', 
-      
-      },
-      
-];
-
-const currentSliderIndex = ref(0);
-let intervalId;
-
-const isTimerPaused = ref(false);
-
-const nextSlide = () => {
-    currentSliderIndex.value = (currentSliderIndex.value + 1) % images.length;
-    isTimerPaused.value ? '' : startSlider()
-};
-
-const prevSlide = () => {
-    currentSliderIndex.value = (currentSliderIndex.value - 1 + images.length) % images.length;
-    isTimerPaused.value ? '' : startSlider()
-};
-
-const startSlider = () => {
-    intervalId = setInterval(() => {
-        nextSlide();
-    }, 3000);
-};
-
-const playSlider = () => {
-    isTimerPaused.value = false;
-    startSlider();
-}
-
-const stopSlider = () => {
-    clearInterval(intervalId);
-    isTimerPaused.value = true;
-}
-
-startSlider();
-
-onUnmounted(() => {
-    clearInterval(intervalId);
-});
-</script>
-
 <template>
-    <div class="h-screen flex flex-col">
-        <div class="bg-slate-500 text-center p-4 uppercase text-gray-50">
-    
-        </div>
+
+    <div class="image-grid">
       
-
-        <div class="slider flex h-[50%]">
-            <div class="flex mx-auto justify-center relative w-[500px] h-[300px] m-auto">
-                <template v-for="(image, index) in images" :key="index">
-                    <transition name="fade">
-                        <img :src="image.src" :alt="image.alt" class="photo"
-                            v-if="index === currentSliderIndex" />
-                    </transition>
-                </template>
-
-                <!-- next and previous buttons -->
-                <i class="fas fa-caret-right absolute right-0 top-1/3 text-4xl m-2 cursor-pointer text-white z-50"
-                    @click="nextSlide"></i>
-                <i class="fas fa-caret-left absolute left-0 top-1/3 text-4xl m-2 cursor-pointer text-white z-50"
-                    @click="prevSlide"></i>
-
-                <!-- play or pause buttons -->
-                <i class="fa-solid fa-circle-play absolute bottom-5 text-3xl m-2 cursor-pointer text-gray-500 z-50"
-                    @click="playSlider" v-if="isTimerPaused"></i>
-                <i class="fa-solid fa-pause absolute bottom-5 text-3xl  m-2 cursor-pointer shadow-2xl text-gray-500 z-50"
-                    @click="stopSlider" v-else></i>
-            </div>
-        </div>
+        <button @click="previousPhoto" class="previous"><a class="min-button">Previous</a><a class="max-button"> Previous Image</a></button>
+        <button @click="nextPhoto" class="next"><a class="min-button">Next</a><a class="max-button"> Next Image</a></button>
+        <div v-for="(image, index) in images" :key="index" class="image-loop">
+                        
+                            <img :src="image.src" :alt="image.alt" class="photo"
+                                v-if="index === interval" />
+                                <div class="caption" v-if="index===interval">{{ image.caption }}</div>
+                 </div>
     </div>
-
-</template>
-
-<style>
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity 1s, transform 1s;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-    opacity: 0;
-    transform: translateX(0);
-}
-.photo {
-    width: 90vw;
-    height: auto;
-}
-@media (min-width: 1024px){
-    .photo {
-    max-width: 600px;
-    height: auto;
-    margin: auto;
-}
-}
-</style>
+    
+    
+    </template>
+    <script>
+    
+    
+    export default {
+     
+        data(){
+          return {
+            images: [
+    
+            { src: './tenmo_images/tenmo_menu.png', 
+            alt: 'menu', 
+           
+          },
+          { src: './tenmo_images/tenmo_send.png',
+            alt: 'send', 
+            
+          },
+          { src: './tenmo_images/tenmo_request.png',
+            alt: 'request', 
+        },
+            
+            { src: './tenmo_images/tenmo_approve.png',
+            alt: 'approve a request', 
+          },
+    
+          { src: './tenmo_images/tenmo_history.png',
+            alt: 'history', 
+          
+          },
+            ],
+            interval: 0,
+          }
+        }, 
+        methods: {
+            nextPhoto(){
+                if(this.interval + 1 === this.images.length){
+                    this.interval = 0;
+                }else {
+                    this.interval += 1;
+                }
+            }, 
+            previousPhoto() {
+                if(this.interval == 0){
+                    this.interval = this.images.length - 1;
+                }else {
+                    this.interval -= 1;
+                }
+            }
+        }
+    }
+    </script>
+    <style scoped>
+    
+    .image-grid{
+        display: grid;
+        max-width: 600px;
+        grid-template-columns: 1fr  1fr;
+        grid-template-areas: 
+        "previous-button  next-button"
+        "image-loop image-loop"
+        ;
+    }
+    .previous{
+        grid-area: previous-button;
+    }
+    .next{
+        grid-area: next-button;
+        justify-self: right;
+    }
+    
+    .image-loop {
+        max-width: 600px;
+        grid-area: image-loop;
+    }
+    
+    .min-button{
+      display: normal;
+      }
+      .max-button{
+        display: none;
+      }
+      .photo{
+        max-width: 90vw;
+      }
+      
+      @media (min-width: 1024px) {
+      
+        .photo{
+        max-width: 600px;
+      }
+        .min-button{
+          display: none;
+      }
+      .max-button{
+        display: block;
+      }
+    }
+    </style>

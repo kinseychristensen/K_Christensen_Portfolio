@@ -19,15 +19,14 @@ defineProps({
 <style scoped>
 h1 {
   font-weight: 500;
-  font-size: 2.6rem;
-  position: relative;
+  font-size: xx-large;
   top: -10px;
   font-style: bold;
   line-height: normal;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: large;
   line-height: normal;
 }
 

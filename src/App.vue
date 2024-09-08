@@ -34,7 +34,7 @@ export default {
   <header>
     <img alt="Photo of Kinsey" class="logo" src="./assets/KChristensen.jpg"/>
 
-    <div class="wrapper">
+   
       <Tagline msg="Kinsey Christensen" id="tagline"/>
 
       <nav id="nav-links">
@@ -42,7 +42,7 @@ export default {
         <a @click="showProjectNow">Projects</a>
         <a href=" https://www.linkedin.com/in/kinsey-christensen/">My LinkedIn</a> 
       </nav>
-    </div>
+   
   </header>
 
   <div v-if="showHome"><HomeComponent/></div>
@@ -51,7 +51,7 @@ export default {
   
 
   <footer><a href="https://www.flaticon.com/free-icons/flower" title="flower icons">Flower icons created by Freepik - Flaticon</a>
-          | <a href='https://medium.com/@prachishah03737/vue-3-image-slider-from-scratch-for-beginners-a-step-by-step-tutorial-with-composition-api-03a0aa21fc60'>Image Slider by Prachi Shah</a> </footer>
+          </footer>
 </div>
 </template>
 
@@ -62,15 +62,12 @@ header {
  grid-template-columns: 1fr;
  grid-template-areas: 
  "logo"
- "wrapper";
+ "nav-links"
+ "tag"
+ ;
  margin-top: 40px;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "nav" "tagline";
-}
 
 .logo {
  margin: auto;
@@ -88,17 +85,17 @@ header {
 
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: large;
   text-align: center;
 
   
 }
 #nav-links{
-  grid-area: nav;
+  grid-area: nav-links;
   
 }
 #tagline{
-  grid-area: tagline;
+  grid-area: tag;
 }
 
 nav a.router-link-exact-active {
@@ -126,31 +123,36 @@ footer{
 
 
 @media (min-width: 1024px) {
-  header {
-    display: flex;
-    max-width: 50vw;
-   grid-area: header;
+  header{ 
+  max-height: 100vh;
+  display: grid;
+ grid-template-columns: 220px 1fr;
+ grid-template-rows: 200px 60px 1fr;
+ grid-template-areas: 
+ "logo tag"
+ "logo nav-links"
+ ". ."
+ ;
+ margin-top: 40px;
+ gap: 3px;
   }
-
   .logo {
     margin: 0px;
-  
-
   }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-    padding: 15px;
-  }
+  #tagline{
+  grid-area: tag;
+  max-height: 200px;
+}
+#nav-links{
+  grid-area: nav-links;
+  align-content: center;
+}
 
   nav {
     text-align: left;
-    margin-left: -1rem;
     font-size: 1rem;
-
-    padding: 1rem 0;
+    
  
   }
   .profile{
