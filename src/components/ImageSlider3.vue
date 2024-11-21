@@ -23,24 +23,32 @@
           return {
             images: [
     
-            { src: './tenmo_images/tenmo_menu.png', 
-            alt: 'menu', 
+            { src: './sweeter_images/recipe.png', 
+            alt: 'recipe details', 
            
           },
-          { src: './tenmo_images/tenmo_send.png',
-            alt: 'send', 
+          { src: './sweeter_images/display_comments.png',
+            alt: 'comments', 
             
           },
-          { src: './tenmo_images/tenmo_request.png',
-            alt: 'request', 
+          { src: './sweeter_images/search.png',
+            alt: 'search for a recipe', 
         },
             
-            { src: './tenmo_images/tenmo_approve.png',
-            alt: 'approve a request', 
+            { src: './sweeter_images/submit_recipe.png',
+            alt: 'user submitting a recipe', 
           },
     
-          { src: './tenmo_images/tenmo_history.png',
-            alt: 'history', 
+          { src: './sweeter_images/approve_recipe.png',
+            alt: 'admin approving and formatting a recipe', 
+          
+          },
+          { src: './sweeter_images/edit_recipe.png',
+            alt: 'admin editing an existing recipe', 
+          
+          },
+          { src: './sweeter_images/user_menu.png',
+            alt: 'user settings menu for an admin', 
           
           },
             ],

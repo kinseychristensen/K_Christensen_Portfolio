@@ -7,8 +7,7 @@
  
     <h3>Hello!</h3>
 <div class="about-me">
-  Hello!  
-
+  
 <p>My name is Kinsey and I have always been a collector of knowledge.  I spent my childhood absolutely devouring the shelves of my local library, and as an adult I still have a deep hunger for learning about our incredible universe.  One particular fascination for me has always been the power of language and how the words we choose can impact our world.  Learning to code software has been an absolutely perfect extension of this long-held interest.  Through studying at SNHU and Tech Elevator I've gathered experience and skills in object oriented programming, web development, database management.  I've gotten to work with Java, Vue.js, Javascript, C++, and Python doing both front and backend coding.  I am looking for a new position where I can share my unique skills and strengths.  
 </p><p>
 My experience working in team-oriented environments has helped me become very open to accepting and providing feedback. I can balance multiple tasks and produce content accurately and proficiently under tight deadlines. I produced two musicals while teaching a course load of seven unique classes! 

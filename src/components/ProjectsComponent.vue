@@ -2,9 +2,9 @@
     <div class="projects">
       
       <nav class="project-nav">
-        <button @click="showInformative">inFormative</button>
-        <button @click="showFlip">Flip Flash</button>
-        <button @click="showTenmo">Tenmo</button>
+        <button @click="showSweeter"><a id="future">Sweeter</a><a id="projects"> Sweeter by the Dozen</a></button>
+        <button @click="showInformative"><a>inFormative</a></button>
+        <button @click="showFlip"><a>Flip Flash</a></button>
         <button @click="showFuture"><a id="future">Future</a><a id="projects"> Future Projects</a></button>
       </nav>
   
@@ -15,8 +15,8 @@
       <div id="flip-flash" v-if="flipFlash">
         <FlipFlashDetails/>
       </div>
-      <div id="tenmo" v-if="tenmo">
-        <TenmoDetails/>
+      <div id="sweeter" v-if="sweeter">
+        <SweeterDetails/>
     </div>
     <div class="future" v-if="futureProjects">
      <FutureProjectDetails/>
@@ -26,7 +26,7 @@
   <script>
   import InformativeDetails from './InformativeDetails.vue';
   import FlipFlashDetails from './FlipFlashDetails.vue';
-  import TenmoDetails from './TenmoDetails.vue';
+  import SweeterDetails from './SweeterDetails.vue';
   import FutureProjectDetails from './FutureProjectDetails.vue';
   
   
@@ -35,14 +35,14 @@
     components: {
       InformativeDetails,
       FlipFlashDetails,
-      TenmoDetails,
+      SweeterDetails,
       FutureProjectDetails,
     },
     data(){
       return {
-        informative: true,
+        informative: false,
         flipFlash: false,
-        tenmo: false,
+        sweeter: true,
         futureProjects: false,
       }
     }, 
@@ -50,25 +50,25 @@
       showInformative(){
         this.informative = true;
         this.flipFlash = false;
-        this.tenmo = false;
+        this.sweeter = false;
         this.futureProjects = false;
       },
       showFlip(){
         this.informative = false;
         this.flipFlash = true;
-        this.tenmo = false;
+        this.sweeter = false;
         this.futureProjects = false;
       },
-      showTenmo(){
+      showSweeter(){
         this.informative = false;
         this.flipFlash = false;
-        this.tenmo = true;
+        this.sweeter = true;
         this.futureProjects = false;
       },
       showFuture(){
         this.informative = false;
         this.flipFlash = false;
-        this.tenmo = false;
+        this.sweeter = false;
         this.futureProjects = true;
       }
     }
