@@ -10,7 +10,7 @@
          Email.js is utilized to allow for two factor authentication for password resets as well as sending user notifications.  
  </p>
 
- <p>The site is now at the point of styling and final tests.  It should be live by December 24, 2024.</p>
+ <p>The site is now <a href="https://sweeterbythedozenrecipes.com/">live</a>! </p>
  <ImageSlider3/>
    </template>
   

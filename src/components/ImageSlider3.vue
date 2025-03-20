@@ -35,20 +35,20 @@
             alt: 'search for a recipe', 
         },
             
-            { src: './sweeter_images/submit_recipe.png',
-            alt: 'user submitting a recipe', 
-          },
-    
-          { src: './sweeter_images/approve_recipe.png',
-            alt: 'admin approving and formatting a recipe', 
-          
-          },
           { src: './sweeter_images/edit_recipe.png',
             alt: 'admin editing an existing recipe', 
           
           },
           { src: './sweeter_images/user_menu.png',
             alt: 'user settings menu for an admin', 
+          
+          },
+          { src: './sweeter_images/add_image.png',
+            alt: 'user uploading an image to a recipe', 
+          
+          },
+          { src: './sweeter_images/resources_page.png',
+            alt: 'additional resources for users such as temperature ranges', 
           
           },
             ],

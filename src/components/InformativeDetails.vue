@@ -9,8 +9,7 @@
          They then assign artifacts to individual indicators.  Artifacts recieve a numbered score that can then be used to create 
          robust data maps showing how a student, class, or study group improves and develops their skills for that indicator.  
 </p><p>
-The website is <a href="https://informative-teacher.netlify.app/">now live</a>!   The backend is hosted via Heroku and the front end is hosted on Netlify.  
-</p><p>
+
 Future goals include building out the archive further so that past courses' data to be compared to current course data, creating a print report option, 
 and developing a full mobile app in addition to the current mobile web design. 
 </p>
